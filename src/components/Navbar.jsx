@@ -6,7 +6,7 @@ import Experience from "./Experience";
 import Contact from "./Contact";
 import About from "./About";
 import Resume from "./Resume";
-
+import ScrollToTop from './ScrollTopComponent';
 function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -14,6 +14,7 @@ function Navbar() {
 
   return (
     <Router>
+      <ScrollToTop/>
       <div
         className={`${
           darkMode

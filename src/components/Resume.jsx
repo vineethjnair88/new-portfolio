@@ -2,7 +2,6 @@ import React from "react";
 import { FaDownload } from "react-icons/fa";
 import cv from "../assets/images/Vineeth-Nair.pdf"
 import { useNavigate } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
 const Resume = () => {
 
   const navigate = useNavigate();
@@ -182,14 +181,15 @@ const Resume = () => {
         <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800 mb-4">
           EDUCATION
         </h2>
-        <p className="text-xs sm:text-sm lg:text-base text-gray-600">
-          <strong>Bachelor’s in Mechanical Engineering</strong>, Kerala
-          University, 2012 - 2016
-        </p>
         <p className="text-xs sm:text-sm lg:text-base text-gray-600 mt-2">
           <strong>Diploma in Product Design and Analysis</strong>, CADD Center,
           2017 - 2018
         </p>
+        <p className="text-xs sm:text-sm lg:text-base text-gray-600">
+          <strong>Bachelor’s in Mechanical Engineering</strong>, Kerala
+          University, 2012 - 2016
+        </p>
+        
       </section>
     </div>
     </div>
