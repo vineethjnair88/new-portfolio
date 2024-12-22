@@ -52,8 +52,8 @@ export default function Contact({ darkMode }) {
               required
               className={`w-full p-3 rounded-md focus:outline-none mb-4 ${
                 darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-gray-900"
-              } focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50`}
-              whileFocus={{ scale: 1.05, boxShadow: "0 0 8px rgba(0, 255, 255, 0.8)" }}
+              } focus:ring-2 focus:ring-grey-500 focus:ring-opacity-50`}
+              // whileFocus={{ scale: 1.05, boxShadow: "0 0 8px rgba(0, 255, 255, 0.8)" }}
             />
             <motion.input
               type="email"
@@ -62,8 +62,8 @@ export default function Contact({ darkMode }) {
               required
               className={`w-full p-3 rounded-md focus:outline-none mb-4 ${
                 darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-gray-900"
-              } focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50`}
-              whileFocus={{ scale: 1.05, boxShadow: "0 0 8px rgba(0, 255, 255, 0.8)" }}
+              } focus:ring-2 focus:ring-grey-500 focus:ring-opacity-50`}
+              // whileFocus={{ scale: 1.05, boxShadow: "0 0 8px rgba(0, 255, 255, 0.8)" }}
             />
             <motion.textarea
               name="message"
@@ -72,13 +72,13 @@ export default function Contact({ darkMode }) {
               required
               className={`w-full p-3 rounded-md focus:outline-none mb-4 ${
                 darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-gray-900"
-              } focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50`}
-              whileFocus={{ scale: 1.05, boxShadow: "0 0 8px rgba(0, 255, 255, 0.8)" }}
+              } focus:ring-2 focus:ring-grey-500 focus:ring-opacity-50`}
+              // whileFocus={{ scale: 1.05, boxShadow: "0 0 8px rgba(0, 255, 255, 0.8)" }}
             ></motion.textarea>
             <motion.button
               type="submit"
               className={`w-full p-3 rounded-md text-lg font-semibold transition duration-300 ${
-                darkMode ? "bg-blue-600 hover:bg-blue-700 text-white" : "bg-blue-500 hover:bg-blue-600 text-white"
+                darkMode ? "bg-blue-600 hover:bg-blue-700 text-white" : "bg-[#B8001F] text-white"
               }`}
               whileHover={{ scale: 1.05, boxShadow: "0 0 8px rgba(0, 255, 255, 0.8)" }}
             >
@@ -92,13 +92,13 @@ export default function Contact({ darkMode }) {
           <a href="https://github.com/your-github-username" target="_blank" rel="noreferrer">
             <FaGithub  />
           </a>
-          <a href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/vineeth-jay/" target="_blank" rel="noreferrer">
             <FaLinkedin  />
           </a>
-          <a href="https://www.instagram.com/your-instagram-username/" target="_blank" rel="noreferrer">
+          <a href="https://www.instagram.com/vineeth__jay/" target="_blank" rel="noreferrer">
             <FaInstagram  />
           </a>
-          <a href="https://api.whatsapp.com/send?phone=your-whatsapp-number" target="_blank" rel="noreferrer">
+          <a href="https://api.whatsapp.com/send?phone=917012931784" target="_blank" rel="noreferrer">
             <FaWhatsapp  />
           </a>
         </motion.div>

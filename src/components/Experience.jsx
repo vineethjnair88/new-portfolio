@@ -6,26 +6,26 @@ const experiences = [
     role: " Software Developer",
     company: "Softnotions Technologies Pvt Ltd",
     description:
-      "Developed front-end applications using React and back-end services with Node.js, following the MVC design pattern for scalability and maintainability.Managed global state effectively using Redux and Zustand and created custom hooks for API calls.Collaborated with the team using GitHub, managing pull requests and ensuring smooth code integration.",
-    skills: ["React.js", "Next.js", "Redux.js", "Tailwind", "Firebase"],
+      "I contributed to all stages of the development lifecycle, building and maintaining scalable web applications using React, Node.js, and MongoDB. My work included implementing secure REST APIs (JWT), robust state management (Redux, Zustand), and engaging 3D visuals (Three.js). Data security and GDPR compliance were ensured using AWS Secrets Manager. I also collaborated effectively in Agile teams, participated in client meetings, and mentored junior team members.",
+    skills: ["React.js", "Node.js","MongoDB", "Redux.js", "Tailwind", "MaterialUI"],
     iconBg: "bg-blue-500", // Icon background color
   },
   {
-    date: "Jan 2021 - Sep 2022",
+    date: "Jan 2022 - Sep 2022",
     role: "Frontend Developer",
-    company: "Upwork (Freelance)",
+    company: "(Freelance)",
     description:
       "Developed custom websites using HTML, CSS, JavaScript, React, and Node.js. Collaborated with clients to ensure project goals were met on time and within budget, translating their requirements into functional web solutions. Providing post-project maintenance and support.",
-    skills: ["React.js", "React Native", "Bootstrap", "VanillaJS"],
+    skills: ["React.js", "Node.js","MongoDB", "Bootstrap", "VanillaJS"],
     iconBg: "bg-blue-500",
   },
   {
-    date: "Jan 2020 - Nov 2020",
+    date: "Mar 2021 - Nov 2021",
     role: "PHP Developer Intern",
     company: "Trinity Technologies",
     description:
-      "Design and develop UI components . Integration of user-facing elements developed by front- end developers with server-side logic.Design and implement user interface components for JavaScript-based web and mobile applications using latest technologies.",
-    skills: ["React.js", "React Native", "Bootstrap"],
+      "Using PHP, MySQL, AJAX, and jQuery, I contributed to the development and maintenance of web applications within a small-scale company. My work included dynamic data handling, query optimization for performance improvement, and SQL database design and management. I collaborated effectively with cross-functional teams (product, design, QA) in Agile environments to deliver high-quality software on schedule. I also designed and implemented a micro-frontend architecture using IFrames, addressing key challenges in performance optimization and UX consistency to create a responsive and intuitive user interface.",
+    skills: ["PHP", "MySQL", "Bootstrap","AJAX","jQuery","JavaScript"],
     iconBg: "bg-blue-500",
   },
 ];
@@ -47,15 +47,15 @@ const Experience = ({ darkMode }) => {
       </h2>
       <div
         className={`relative border-l-4 ${
-          darkMode ? "border-blue-400" : "border-white"
-        } mx-auto max-w-4xl`}
+          darkMode ? "border-blue-400" : "border-[#B8001F]"
+        } mx-auto max-w-4xl py-12`}
       >
         {experiences.map((exp, index) => (
           <div key={index} className="mb-12 ml-6">
             {/* Icon */}
             <div
               className={`absolute -left-5 top-0 w-10 h-10 ${
-                darkMode ? "bg-blue-400" : "bg-white"
+                darkMode ? "bg-blue-400" : "bg-[#B8001F]"
               } rounded-full flex items-center justify-center`}
             >
               <span className="text-xl">{darkMode ? "💻" : "💻"}</span>
@@ -64,15 +64,15 @@ const Experience = ({ darkMode }) => {
             <p
               className={`${
                 darkMode ? "text-gray-400" : "text-gray-600"
-              } text-sm mb-2`}
+              } text-sm mb-2 `}
             >
-              {exp.date}
+             <span className="text-3xl">🧑‍💻 </span>{exp.date}
             </p>
-            <h3 className="text-xl font-bold">{exp.role}</h3>
+            <h3 className="text-xl font-bold ">{exp.role}</h3>
             <p className="mb-4">{exp.company}</p>
-            <p className="mb-4">{exp.description}</p>
+            <p className="mb-4 text-sm">{exp.description}</p>
             {/* Skills */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 ">
               {exp.skills.map((skill, idx) => (
                 <span
                   key={idx}

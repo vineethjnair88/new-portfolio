@@ -5,7 +5,7 @@ const About = () => {
    <div>
      <section
     id="about"
-    className="min-h-screen flex flex-col md:flex-row items-center lg:px-24 md:px-12"
+    className="min-h-screen flex lg:pt-1 flex-col md:flex-row items-center lg:px-24  md:px-12 pt-12"
   >
     {/* Left Column - About Me Content */}
     <div className="w-full md:w-1/2 text-center md:text-left">
@@ -13,18 +13,12 @@ const About = () => {
         Hello! I'm Vineeth Jay
       </h2>
       <p className="leading-relaxed mb-4">
-        Passionate full-stack web developer with
-        expertise in JavaScript, React, and Node.js. I specialize in
-        building user-friendly web applications with a focus on
-        performance and clean design.
+      I'm a full-stack web developer with 2+ years of experience building and optimizing web applications using JavaScript, React, and Node.js. 
+      I'm passionate about delivering scalable solutions within Agile environments, with a strong focus on performance optimization and user experience. 
+      I believe in continuous learning and enjoy sharing knowledge with others, sometimes even informally mentoring aspiring developers.
       </p>
       <p className="leading-relaxed">
-        With 2+ years of experience in the tech industry, I have worked
-        with a diverse range of clients, turning ideas into functional,
-        scalable, and visually appealing digital solutions. When I’m not
-        coding, you can find me exploring new tech trends, mentoring
-        aspiring developers, or capturing the world through my camera
-        lens.
+      When I'm not coding or sharing knowledge, I enjoy exploring new tech and capturing moments through photography 📷.
       </p>
     </div>
 

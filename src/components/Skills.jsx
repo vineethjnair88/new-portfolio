@@ -20,7 +20,7 @@ export default function Skills({ darkMode }) {
   ];
 
   return (
-    <section id="skills" className=" lg:px-24  md:px-12 px-6">
+    <section id="skills" className=" lg:px-24  md:px-12">
       <h2 className="text-4xl font-bold text-center mb-8">#SKILLS</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5">
       {skills.map((skill, index) => (

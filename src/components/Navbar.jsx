@@ -25,7 +25,7 @@ function Navbar() {
         <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
         {/* Main Content */}
-        <main className="container mx-auto py-1 px-12 pt-24">
+        <main className="container mx-auto  px-12 pt-12">
           <Routes>
             {/* Route for PDF */}
             <Route path="/pdf" element={<Resume />} />
