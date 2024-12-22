@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
-import Experience from './components/Experience';
-import Preloader from './components/Preloader'; // Import the Preloader component
+import React, { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom"; // Router here in App
+import Navbar from "./components/Navbar";
+import Preloader from "./components/Preloader"; // Import Preloader component
+import { ThemeProvider } from "./context/themeContext";
 
 function App() {
   const [loadingComplete, setLoadingComplete] = useState(false); // State to manage preloader
@@ -15,17 +10,11 @@ function App() {
   return (
     <>
       {loadingComplete ? (
-        <Router>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </Router>
+        
+          <ThemeProvider>
+            <Navbar />
+          </ThemeProvider>
+       
       ) : (
         <Preloader setLoadingComplete={setLoadingComplete} />
       )}

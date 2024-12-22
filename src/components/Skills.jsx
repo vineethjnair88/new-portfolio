@@ -1,57 +1,46 @@
-import { motion } from 'framer-motion';
-import { FaReact, FaCss3Alt, FaBootstrap, FaNodeJs, FaHtml5,FaAws } from 'react-icons/fa';
-import { SiRedux, SiMongodb,SiMaterialformkdocs } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGitAlt } from "react-icons/fa";
+import { SiTailwindcss, SiBootstrap, SiMaterialui, SiRedux, SiAntdesign } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
 
-export default function Skills() {
-    
+export default function Skills({ darkMode }) {
   const skills = [
-    { name: 'React', icon: <FaReact className="text-4xl" />, description: 'A JavaScript library for building user interfaces.' },
-    { name: 'CSS', icon: <FaCss3Alt className="text-4xl" />, description: 'Style your web pages with CSS.' },
-    { name: 'Bootstrap', icon: <FaBootstrap className="text-4xl" />, description: 'A framework for responsive web development.' },
-    { name: 'Redux', icon: <SiRedux className="text-4xl" />, description: 'State management for React applications.' },
-    { name: 'Node.js', icon: <FaNodeJs className="text-4xl" />, description: 'JavaScript runtime built on Chrome\'s V8 JavaScript engine.' },
-    { name: 'MongoDB', icon: <SiMongodb className="text-4xl" />, description: 'A NoSQL database for modern applications.' },
-    { name: 'Material UI', icon: <SiMaterialformkdocs className="text-4xl" />, description: 'React components that implement Google\'s Material Design.' },
-    { name: 'HTML', icon: <FaHtml5 className="text-4xl" />, description: 'The standard markup language for documents designed to be displayed in a web browser.' },
-    { name: 'AWS', icon: <FaAws className="text-4xl" />, description: 'Amazon Web Services - Cloud computing services.' },
+    { name: "React", icon: <FaReact />, color: "text-blue-500" },
+    { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
+    { name: "HTML", icon: <FaHtml5 />, color: "text-orange-600" },
+    { name: "CSS", icon: <FaCss3Alt />, color: "text-blue-600" },
+    { name: "JavaScript", icon: <FaJs />, color: "text-yellow-500" },
+    { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-blue-400" },
+    { name: "Bootstrap", icon: <SiBootstrap />, color: "text-purple-600" },
+    { name: "Git", icon: <FaGitAlt />, color: "text-red-500" },
+    { name: "Redux", icon: <SiRedux />, color: "text-purple-700" },
+    { name: "Ant Design", icon: <SiAntdesign />, color: "text-cyan-500" },
+    { name: "MongoDB", icon: <SiMongodb />, color: "text-green-500" },
+    { name: "Express", icon: <SiExpress />, color: "text-white" },
   ];
 
   return (
-    <div id="skills" className="bg-gray-900 text-white min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.h2
-          className="text-4xl font-bold text-center mb-12"
-          initial={{ y: -50 }}
-          animate={{ y: 0 }}
-          transition={{
-            type: "spring",
-            stiffness: 100,
-            damping: 10,
-          }}
-        
-        >
-          My Skills
-        </motion.h2>
+    <section id="skills" className=" lg:px-24  md:px-12 px-6">
+      <h2 className="text-4xl font-bold text-center mb-8">#SKILLS</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5">
+      {skills.map((skill, index) => (
+  <div
+    key={index}
+    className={`flex flex-col items-center p-4 rounded-lg shadow-lg hover:scale-105 transition-transform ${
+      darkMode
+        ? "hover:border-blue-500 hover:shadow-[0_0_15px_5px_rgba(59,130,246,0.7)]"
+        : "hover:border-gray-600 hover:shadow-[0_0_15px_5px_rgba(169,169,169,0.7)]"
+    } ${
+      darkMode ? "bg-gray-800 border-gray-700" : "bg-[#D9EAFD] border-gray-900 text-gray-900"
+    }`}
+  >
+    <div className={`text-3xl ${skill.color} mb-4`}>{skill.icon}</div>
+    <h3 className=" font-medium  hover:text-blue-500">{skill.name}</h3>
+  </div>
+))}
 
-        {/* Skills Icons Section */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
-          {skills.map((skill, index) => (
-         <motion.div
-         key={index}
-         className="flex flex-col items-center bg-gray-800 p-6 rounded-lg shadow-lg border-4 border-transparent hover:border-blue-500 hover:shadow-[0_0_15px_5px_rgba(59,130,246,0.7)]"
-         initial={{ opacity: 0, y: 50 }}
-         animate={{ opacity: 1, y: 0 }}
-         transition={{ duration: 1 }}
-         whileHover={{ scale: 1.2 }}
-       >
-              <div className="text-blue-500 mb-4">{skill.icon}</div>
-              <h3 className="text-2xl font-semibold">{skill.name}</h3>
-              <p className="text-gray-400 text-center">{skill.description}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </div>
-    
+</div>
+
+    </section>
   );
 }
