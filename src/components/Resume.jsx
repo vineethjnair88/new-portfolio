@@ -24,7 +24,7 @@ const Resume = () => {
           href={cv} 
            target="_blank" 
           rel="noopener noreferrer"
-          download="Vineeth_Jay_Resume.pdf"
+          download="Vineeth_Jay_CV.pdf"
           className="bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 focus:outline-none flex items-center justify-center"
         >
           <FaDownload className="text-lg mr-2" />
